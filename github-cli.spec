@@ -1,20 +1,20 @@
-%define		vendor_version	2.33.0
+%define		vendor_version	2.34.0
 
 Summary:	GitHub’s official command line tool
 Name:		github-cli
-Version:	2.33.0
+Version:	2.34.0
 Release:	1
 License:	MIT
 Group:		Development/Tools
 #Source0Download: https://github.com/cli/cli/releases
 Source0:	https://github.com/cli/cli/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	6d98dceec4f14e129bcbd4d951f34eb5
+# Source0-md5:	9ac1b4e0d20cd4a4d8f85f8f2aa720b9
 # cd cli-%{version}
 # go mod vendor
 # cd ..
 # tar cJf github-cli-vendor-%{version}.tar.xz cli-%{version}/vendor
 Source1:	%{name}-vendor-%{vendor_version}.tar.xz
-# Source1-md5:	7ecd9ef8d23983495af48d97579ea2af
+# Source1-md5:	8c0a0e5ba2e62dbc68492988287bf0ab
 URL:		https://cli.github.com
 BuildRequires:	golang >= 1.21
 BuildRequires:	rpm-build >= 4.6
