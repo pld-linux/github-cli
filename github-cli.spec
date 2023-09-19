@@ -2,13 +2,13 @@
 
 Summary:	GitHub’s official command line tool
 Name:		github-cli
-Version:	2.34.0
+Version:	2.35.0
 Release:	1
 License:	MIT
 Group:		Development/Tools
 #Source0Download: https://github.com/cli/cli/releases
 Source0:	https://github.com/cli/cli/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	9ac1b4e0d20cd4a4d8f85f8f2aa720b9
+# Source0-md5:	bacce482983a5c722da24bdec1f3cfc0
 # cd cli-%{version}
 # go mod vendor
 # cd ..
