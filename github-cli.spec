@@ -24,7 +24,7 @@ BuildRequires:	xz
 ExclusiveArch:	%go_arches
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_debugsource_packages	0
+%undefine	_debugsource_packages
 
 %description
 gh is GitHub on the command line. It brings pull requests, issues, and
