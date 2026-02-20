@@ -1,6 +1,7 @@
 %define		vendor_version	2.87.0
 
-Summary:	GitHub’s official command line tool
+Summary:	GitHub's official command line tool
+Summary(pl.UTF-8):	Oficjalne narzędzie linii poleceń GitHuba
 Name:		github-cli
 Version:	2.87.0
 Release:	1
@@ -15,7 +16,7 @@ Source0:	https://github.com/cli/cli/archive/v%{version}/%{name}-%{version}.tar.g
 # tar cJf github-cli-vendor-%{version}.tar.xz cli-%{version}/vendor
 Source1:	%{name}-vendor-%{vendor_version}.tar.xz
 # Source1-md5:	29a5d30fd794f3e622a1be08ae832c4a
-URL:		https://cli.github.com
+URL:		https://cli.github.com/
 BuildRequires:	golang >= 1.25.7
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 2.009
@@ -31,8 +32,14 @@ gh is GitHub on the command line. It brings pull requests, issues, and
 other GitHub concepts to the terminal next to where you are already
 working with git and your code.
 
+%description -l pl.UTF-8
+gh to narzędzie linii poleceń GitHuba. Udostępnia polecenia scalenia,
+zgłoszenia i inne koncepcje GitHuba z poziomu terminala, z którego już
+pracuje się z gitem i kodem.
+
 %package -n bash-completion-github-cli
 Summary:	Bash completion for github-cli command line
+Summary(pl.UTF-8):	Dopełnianie linii poleceń github-cli dla Basha
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	bash-completion >= 1:2.0
@@ -41,18 +48,26 @@ BuildArch:	noarch
 %description -n bash-completion-github-cli
 Bash completion for github-cli command line.
 
+%description -n bash-completion-github-cli -l pl.UTF-8
+Dopełnianie linii poleceń github-cli dla Basha.
+
 %package -n fish-completion-github-cli
-Summary:	fish-completion for github-cli
+Summary:	Fish completion for github-cli command line
+Summary(pl.UTF-8):	Dopełnianie linii poleceń github-cli dla Fisha
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	fish
 BuildArch:	noarch
 
 %description -n fish-completion-github-cli
-fish-completion for github-cli.
+Fish completion for github-cli command line.
+
+%description -n fish-completion-github-cli -l pl.UTF-8
+Dopełnianie linii poleceń github-cli dla Fisha.
 
 %package -n zsh-completion-github-cli
 Summary:	ZSH completion for github-cli command line
+Summary(pl.UTF-8):	Dopełnianie linii poleceń github-cli dla ZSH
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	zsh
@@ -60,6 +75,9 @@ BuildArch:	noarch
 
 %description -n zsh-completion-github-cli
 ZSH completion for github-cli command line.
+
+%description -n zsh-completion-github-cli -l pl.UTF-8
+Dopełnianie linii poleceń github-cli dla ZSH.
 
 %prep
 %setup -q -a1 -n cli-%{version}
